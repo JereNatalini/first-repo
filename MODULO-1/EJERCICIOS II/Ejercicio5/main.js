@@ -16,7 +16,7 @@ var mayor;
 var menor;
 var edadMenor;
 
-function esMayorDeEdad(personas) {
+esMayorDeEdad = (personas) => {
     const mayoresDeEdad = [];
     for (let i = 0; i < personas.length; i++) 
     {
