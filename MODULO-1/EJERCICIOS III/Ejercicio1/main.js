@@ -1,28 +1,20 @@
-
-
+//Inicial A
 const palabras = ['arbol','Amarillo','Auto','cama','juguete'];
-const empiezaConA = [];
 
-for (let i = 0; i < palabras.length; i++) {
-    const palabra = palabras[i].toUpperCase();
+const empiezaPorA = (palabras) => 
+    palabras.filter(palabra => palabra[0].toLowerCase() === 'a') 
 
-    console.log(palabra)
+console.log(empiezaPorA(palabras));
 
-    if(palabra.charAt(0) == "A")
-    {   
-        empiezaConA.push(palabra)
-    }
-        
-        
+
+
+//Funcion reutilizable por letra
+
+function filteredWordByLetter(word,letter)
+{
+    //Devolver una:   palabra que su primera letra sea igual a letter.
+    return word.filter((word) => word[0].toLowerCase() === letter.toLowerCase())
 }
 
-console.log(empiezaConA)
-
-
-
-
-
-
-
-
-
+const x = prompt("Ingrese una letra")
+console.log(filteredWordByLetter(palabras,x))
